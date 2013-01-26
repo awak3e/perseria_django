@@ -1,0 +1,481 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body
+{
+	background-color: #e4e9ec;
+}
+
+/* -------------------------------------------------- */
+/* --------------------- FONTS ---------------------- */
+/* -------------------------------------------------- */
+
+@font-face 
+{
+	font-family: OpenSans-Light;
+	src: url(fonts/OpenSans-Light.ttf);
+}
+
+@font-face 
+{
+	font-family: OpenSans;
+	src: url(fonts/OpenSans-Regular.ttf);
+}
+
+/* -------------------------------------------------- */
+/* ------------------- BASE PAGE -------------------- */
+/* -------------------------------------------------- */
+
+#wrapper
+{
+	width: auto;
+	margin: 0; padding: 0;
+}
+
+#headerblock
+{
+	width: 100%;
+	height: 180px;
+	margin: 0 auto;
+	
+	background: #c8ddee;
+	background: -moz-linear-gradient(top,  #c8ddee 0%, #d7e0e7 33%, #d1d8e0 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c8ddee), color-stop(33%,#d7e0e7), color-stop(100%,#d1d8e0));
+	background: -webkit-linear-gradient(top,  #c8ddee 0%,#d7e0e7 33%,#d1d8e0 100%);
+	background: -o-linear-gradient(top,  #c8ddee 0%,#d7e0e7 33%,#d1d8e0 100%);
+	background: -ms-linear-gradient(top,  #c8ddee 0%,#d7e0e7 33%,#d1d8e0 100%);
+	background: linear-gradient(to bottom,  #c8ddee 0%,#d7e0e7 33%,#d1d8e0 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c8ddee', endColorstr='#d1d8e0',GradientType=0 );
+
+	border-bottom: 1px solid #b3b8bc;
+}
+
+#header
+{
+	width: 55%;
+	height: 180px;
+	margin: 0 auto;
+}
+
+.auth
+{
+	position: relative;
+	float: right;
+	top: 5%;
+	padding: 1%;
+}
+
+.auth a
+{
+	color: #333333;
+	font-size: 0.7em;
+	font-family: 'OpenSans', sans-serif;
+	text-decoration: none;
+}
+
+.auth:hover
+{
+	background-color: white;
+	cursor: pointer;
+}
+
+.headername
+{
+	position: relative;
+	float: left;
+	
+	color: #414142;
+
+	font-family: 'OpenSans', sans-serif;
+	font-weight: 700;
+	font-size: 50px;
+}
+
+.searchbar
+{
+	position: relative;
+	top: 10%;
+	float: right;
+	
+	height: 15%;
+	width: 25%;
+	
+	margin-right: 2.5%;
+}
+
+.searchbar input
+{
+	height: 100%;
+	width: 100%;
+	
+	-webkit-border-radius: 10px;
+    border-radius: 10px;
+    
+    border-style: none;
+    background-color: #a1a8af;
+    
+    -webkit-box-shadow: inset 1px 1px 5px 0.5px rgba(1, 1, 1, 0.3); 
+    box-shadow: inset 1px 1px 5px 0.5px rgba(1, 1, 1, 0.3);
+    
+    outline: none;
+    
+    font-family: 'OpenSans', sans-serif;
+}
+
+.searchbar input[type=text]
+{
+	padding-left: 5%;
+	padding-right: 5%;
+	
+	color: #FFFFFF;
+}
+
+input::-webkit-input-placeholder{
+    color:white;
+}
+input:-moz-placeholder {
+    color:white;
+}
+input[placeholder], [placeholder], *[placeholder]
+{
+    color:white !important;
+}
+
+
+#navigation
+{
+	position: relative;
+	
+	width: 100%;
+	height: 40px;
+	
+	top: 0%;
+	background-color: white;
+	
+	-webkit-box-shadow:  0px 0px 10px 5px rgba(192, 192, 192, 0.1);
+    box-shadow:  0px 0px 10px 5px rgba(192, 192, 192, 0.1);
+}
+
+#navigation ul
+{
+	list-style: none;
+	line-height: 40px;
+	
+	width: auto;
+	height: 40px;
+}
+
+
+#navigation li
+{
+	display: inline-block;
+	padding-left: 2%;
+	padding-right: 2%;
+}
+
+#navigation li a
+{
+	text-decoration: none;
+	color: #0095dd;
+	font-family: 'OpenSans', sans-serif;
+	font-size: 0.9em;
+}
+
+.borderright
+{
+	border-right: 1px solid #98AFC7;
+}
+
+.clearboth
+{
+	clear: both;
+}
+
+/* -------------------------------------------------- */
+/* ------------------- HOME PAGE -------------------- */
+/* -------------------------------------------------- */
+
+.homecontent
+{
+	margin-top: 25px;
+	background-color: #dbe0e2;
+	height: auto;
+	
+	-webkit-box-shadow: inset 0px 0px 3px 1px #c9cdce;
+    box-shadow: inset 0px 0px 3px 1px #c9cdce;
+    
+    color: #484848;
+   	font-family: 'OpenSans', sans-serif;
+}
+
+.homecontent h2
+{
+	font-family: 'OpenSans-Light', sans-serif;
+	font-size: 1.5em;
+	
+	width: 100%;
+	
+	padding-left: 2%;
+	padding-right: 2%;
+	padding-top: 2%;
+	margin-bottom: 1%;
+}
+
+.homecontentlist
+{
+	margin-left: 4%;
+	margin-right: 4%;
+	padding-bottom: 10px;
+}
+
+.homecontentlist ul
+{
+	list-style-type: circle;
+}
+
+.homecontentlist li
+{
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
+
+.borderbottom
+{
+	border-bottom: 1px dotted #c0c4c7;
+}
+
+.contentbox
+{
+	position: relative;
+	
+	width: 30%;
+	height: 130px;
+	
+	margin-top: 25px;
+	margin-left: 1.5%;
+	margin-right: 1.5%;
+	float: left;
+	
+	background-color: #FFF;
+	border: 1px solid #bebebe;
+	
+	-webkit-border-radius: 5px;
+    border-radius: 5px;
+    
+    -webkit-box-shadow:  1px 1px 2px 1px #d4d9dc;
+    box-shadow:  1px 1px 2px 1px #d4d9dc;
+}
+
+.contentbox:hover .contentlink
+{
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.contentbox:hover .contentlogo
+{
+	position: absolute;
+	background-image:url(images/icons/arrow_right_hover2.png);
+}
+
+.contentboximage
+{
+	float: left;
+	height: 100%;
+	width: 30%;
+}
+
+.contentboxtext
+{
+	float: left;
+	height: 100%;
+	width: 70%;
+	font-family: 'OpenSans-Light', sans-serif;
+}
+
+.contentboxtext p
+{
+	position: absolute;
+	top: 40%;
+	width: 60%;
+	margin: 0 auto;
+	font-size: 1.3em;
+	text-align: center;
+}
+
+.contentlink
+{
+	color: #484848;
+	text-decoration: none;
+}
+
+.contentlogo
+{
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	height: 20px;
+	width: 20px;
+	background-image:url(images/icons/arrow_right.png);
+}
+
+
+/* -------------------------------------------------- */
+/* ----------------- LOG IN PAGE -------------------- */
+/* -------------------------------------------------- */
+
+#outercontent
+{
+	width: 55%;
+	height: auto;
+	margin: 0 auto;
+}
+
+.infobox
+{
+	margin-top: 25px;
+	width: 100%;
+	height: auto;
+	text-align: center;
+	
+}
+
+.infobox p
+{
+	color: #0095dd;
+	background-color: white;
+	padding: 2%;
+	font-family: 'OpenSans', sans-serif;
+	font-size: 1.5em;
+	margin-bottom: 20px;
+	
+	-webkit-box-shadow:  0px 0px 10px 5px rgba(192, 192, 192, 0.1);
+    box-shadow:  0px 0px 10px 5px rgba(192, 192, 192, 0.1);
+}
+
+.login
+{
+	float: left;
+	width: 49%;
+	height: auto;
+	
+	background-color: white;
+	
+	margin-right: 1%;
+	
+	-webkit-box-shadow:  0px 0px 10px 5px rgba(192, 192, 192, 0.1);
+    box-shadow:  0px 0px 10px 5px rgba(192, 192, 192, 0.1);
+}
+
+.frmLogin
+{
+	margin-left: 10%;
+	margin-right: 10%;
+	color: #333333;
+	font-family: 'OpenSans', sans-serif;
+	font-size: 0.9em;
+	margin-bottom: 20px;
+}
+
+
+.frmLogin table
+{
+	width: 90%;
+	text-align: right;
+}
+
+.frmLogin table input[type=text], input[type=password]
+{
+	width: 90%;
+	margin-bottom: 10px;
+}
+
+.frmLogin table input[type=submit]
+{
+	width: 30%;
+}
+
+.headerstyle1
+{
+	font-family: 'OpenSans-Light', sans-serif;
+	font-size: 1.5em;
+	color: #333333;
+	
+	width: 100%;
+	
+	padding: 5%;
+	margin-bottom: 1%;
+}
+
+.register
+{
+	float: left;
+	width: 49%;
+	height: auto;
+	
+	background-color: white;
+	
+	margin-left: 1%;
+	
+	-webkit-box-shadow:  0px 0px 10px 5px rgba(192, 192, 192, 0.1);
+    box-shadow:  0px 0px 10px 5px rgba(192, 192, 192, 0.1);
+}
+
+.errorlist
+{
+	color: red;
+	margin-top: 1%;
+}
+
+
+
+
+
+
+
+
+
+
+
+

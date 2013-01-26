@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block title %}Sign In / Register | Perseria{% endblock %}
+
+{% block content %}
+	<div class="infobox">
+		<p>Would you like to ask us a question? Use the contact page.</p>
+	</div>
+	<div class="login">
+		<h2 class="headerstyle1">Sign In</h2>
+		<form class='frmLogin' action='/auth/' method='post' accept-charset='UTF-8'>
+			{% csrf_token %}
+			<fieldset>
+				<table>
+					<tr>
+						<td colspan="2">
+							{{ form.non_field_errors }}
+						</td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+						<td>{{ form.lusername.errors }}</td>
+					</tr>
+					<tr>
+						<td><label for='username' >Username:</label></td>
+						<td>{{ form.lusername }}</td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+						<td>{{ form.lpassword.errors }}</td>
+					</tr>
+					<tr>
+						<td><label for='password' >Password:</label></td>
+						<td>{{ form.lpassword }}</td>
+					</tr>
+					<tr>
+						<td colspan="2"><input type='submit' name='submitLogin' value='Submit' /><td>
+					</tr>
+				</table>
+			</fieldset>
+		</form>
+	</div>
+	<div class="register">
+		<h2 class="headerstyle1">Register to our services</h2>
+		<form class='frmLogin' action='/auth/' method='post' accept-charset='UTF-8'>
+			{% csrf_token %}
+			<fieldset>
+				<table>
+					<tr>
+						<td colspan="2">
+							{{ form2.non_field_errors }}
+						</td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+						<td>{{ form2.rusername.errors }}</td>
+					</tr>
+					<tr>
+						<td><label for='username' >Username:</label></td>
+						<td>{{ form2.rusername }}</td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+						<td>{{ form2.rpassword.errors }}</td>
+					</tr>
+					<tr>
+						<td><label for='password' >Password:</label></td>
+						<td>{{ form2.rpassword }}</td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+						<td>{{ form2.rpassword_confirm.errors }}</td>
+					</tr>
+					<tr>
+						<td><label for='password' >Repeat password:</label></td>
+						<td>{{ form2.rpassword_confirm }}</td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+						<td>{{ form2.remail.errors }}</td>
+					</tr>
+					<tr>
+						<td><label for='email' >Email:</label></td>
+						<td>{{ form2.remail }}</td>
+					</tr>
+					<tr>
+						<td colspan="2"><input type='submit' name='submitRegister' value='Submit' /><td>
+					</tr>
+				</table>
+			</fieldset>
+		</form>
+	</div>
+	<div class="clearboth"></div>
+{% endblock %}

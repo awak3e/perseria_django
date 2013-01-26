@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Perseria{% endblock %}
+
+{% block content %}
+	<div class="homecontent">
+		<h2>Breakdown Cover Offers</h2>
+		<div class="homecontentlist">
+			<ul>
+				<li class="borderbottom">Hello there</li>
+				<li class="borderbottom">Hello hello hello hello hello hello hello hello hello hello</li>
+				<li>Bye</li>			
+			</ul>
+		</div>
+	</div>
+	<div class="contentbox">
+		<div class="contentboximage">
+			<img src="{{ STATIC_URL }}images/icons/home.png"/>
+		</div>
+		<div class="contentboxtext">
+			<p><a href="/profile/" class="contentlink">View your profile</a></p>
+		</div>
+		<div class="contentlogo">
+			&nbsp;
+		</div>
+	</div>
+	<div class="contentbox">
+		<div class="contentboximage">
+			<img src="{{ STATIC_URL }}images/icons/cover.png"/>
+		</div>
+		<div class="contentboxtext">
+			<p><a href="/profile/" class="contentlink">View breakdown covers</a></p>
+		</div>
+		<div class="contentlogo">
+			&nbsp;
+		</div>
+	</div>
+	<div class="contentbox">
+		<div class="contentboximage">
+			<img src="{{ STATIC_URL }}images/icons/contact.png"/>
+		</div>
+		<div class="contentboxtext">
+			<p><a href="/profile/" class="contentlink">Contact us</a></p>
+		</div>
+		<div class="contentlogo">
+			&nbsp;
+		</div>
+	</div>
+	<div class="clearboth">&nbsp;</div>
+{% endblock %}

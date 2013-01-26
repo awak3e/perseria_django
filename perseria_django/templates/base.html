@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}main.css">
+	<title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+	<div id="wrapper">
+		<div id="headerblock">
+			<div id="header">
+				<div class="auth">
+					<a href="/auth/">
+						{% if user.is_authenticated %}
+							Welcome, {{ user.username }} / <a href="/signout/">Sign Out</a>
+						{% else %}
+							SIGN IN / REGISTER
+						{% endif %}
+					</a>
+				</div>
+				<div class="clearboth">&nbsp;</div>
+				<div class="headername">Perseria</div>
+				<div class="searchbar">
+					<input type="text" PlaceHolder="Search Perseria" />
+				</div>
+				<div class="clearboth">&nbsp;</div>
+				<div id="navigation">
+					<ul>
+						<li class="borderright"><a href="/">Home</a></li><li class="borderright"><a href="/cover">Breakdown Cover</a></li><li class="borderright"><a href="/contact">Contact</a></li>{% if user.is_authenticated %}{% if user.is_staff %}<li class="borderright"><a href="/admin/">Control Panel</a></li>{% endif %}{% endif %}
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="outercontent">
+			{% block content %}{% endblock %}
+	    </div>
+	</div>
+</body>
+</html>
