@@ -93,7 +93,7 @@ body
 
 #header
 {
-	width: 55%;
+	width: 70%;
 	height: 180px;
 	margin: 0 auto;
 }
@@ -212,14 +212,6 @@ input[placeholder], [placeholder], *[placeholder]
 	display: inline-block;
 	padding-left: 2%;
 	padding-right: 2%;
-}
-
-#navigation li a
-{
-	text-decoration: none;
-	color: #0095dd;
-	font-family: 'OpenSans', sans-serif;
-	font-size: 0.9em;
 }
 
 #navigation li a:hover
