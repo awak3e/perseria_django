@@ -6,4 +6,4 @@ class Mechanics(models.Model):
     user = models.ForeignKey(User)
     
 class Cover(models.Model):
-    name = models.CharField()
+    name = models.CharField(max_length=20)
