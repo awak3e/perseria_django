@@ -10,7 +10,7 @@ class Vehicle(models.Model):
     make = models.CharField(max_length=30)
     registration_no = models.CharField(max_length=30)
     
-class Cover(models.Model):
+class BreakdownCover(models.Model):
     #start_date = models.DateField() 
     #end_date = models.DateField()
     user = models.ForeignKey(User)
