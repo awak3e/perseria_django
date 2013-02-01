@@ -34,7 +34,7 @@ class UserResource(ModelResource):
         if not username or not password:
             return self.create_response(request, {
                 'success': False,
-                'reason': 'incorrect',
+                'reason': 'no username and/or password',
                 }, HttpUnauthorized )
 
     def logout(self, request, **kwargs):
