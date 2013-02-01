@@ -4,14 +4,15 @@
 
 {% block content %}
 	<div id = "covercontent">
-		<p>
 			{% if cover %}
+			<p>
+				You currently have our {{ cover.Cover.Type }} breakdown cover.
 				{{ cover.user.username }}
 				{{ cover.start_date }}
 				{{ cover.end_date }}
+			</p>
 			{% else %}
-				We see that you have no breakdown cover with us, why not add one today?
+				<p>We see that you have no breakdown cover with us, why not add one today?</p>
 			{% endif %}
-		</p>
 	</div>
 {% endblock %}
