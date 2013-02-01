@@ -21,15 +21,16 @@ def index(request):
     return render(request, 'index.html')
 
 def cover(request):
-    try:
-        cover = BreakdownCover.objects.get(user=request.user)
-    except BreakdownCover.DoesNotExist:
-        cover = ""
-        
-    try:
-        vehicles = Vehicle.objects.filter(user=request.user)
-    except Vehicle.DoesNotExist:
-        vehicles = ""
+    if request.user.is_authenticated():
+        try:
+            cover = BreakdownCover.objects.get(user=request.user)
+        except BreakdownCover.DoesNotExist:
+            cover = ""
+            
+        try:
+            vehicles = Vehicle.objects.filter(user=request.user)
+        except Vehicle.DoesNotExist:
+            vehicles = ""
         
     return render(request, 'cover.html', { 'cover' : cover, 'vehicles' : vehicles,})
 
