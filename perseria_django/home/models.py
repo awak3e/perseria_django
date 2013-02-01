@@ -11,10 +11,9 @@ class Vehicle(models.Model):
     registration_no = models.CharField(max_length=30)
     
 class Cover(models.Model):
-    user = models.ForeignKey(User)
     start_date = models.DateField() 
     end_date = models.DateField()
-    vehicles = models.ForeignKey(Vehicle) 
+    user = models.ForeignKey(User)
     
 class Job(models.Model):
     user = models.ForeignKey(User)
