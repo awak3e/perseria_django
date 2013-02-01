@@ -32,7 +32,9 @@ def cover(request):
         except Vehicle.DoesNotExist:
             vehicles = ""
         
-    return render(request, 'cover.html', { 'cover' : cover, 'vehicles' : vehicles,})
+        return render(request, 'cover.html', { 'cover' : cover, 'vehicles' : vehicles,})
+
+    return render(request, 'cover.html')
 
 def auth(request):
     form = LoginForm()
