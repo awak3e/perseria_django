@@ -24,6 +24,7 @@ class UserResource(ModelResource):
             url(r'^(?P<resource_name>%s)/logout%s$' %
                 (self._meta.resource_name, trailing_slash()),
                 self.wrap_view('logout'), name='api_logout'),
+            url(r"^(?P<resource_name>%s)/(?P<username>[\w\d_.-]+)/$" % self._meta.resource_name, self.wrap_view('dispatch_detail'), name="api_dispatch_detail"),
         ]
         
     def login(self, request, **kwargs):
