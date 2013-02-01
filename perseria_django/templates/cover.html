@@ -6,18 +6,20 @@
 	<div id = "covercontent">
 			{% if cover %}
 			<div class="breakdown">
-				<h2>{{ cover.cover.type }} breakdown cover</h2>
-				<p>Thank you for choosing us for your breakdown cover</p>
-				<p>{{ cover.cover.description }}</p>
-				<p>Start date: {{ cover.start_date }}</p>
-				<p>End date: {{ cover.start_date }}</p>
-				<ul>
-					{% for vehicle in vehicles %}
-						<li>{{ vehicle.registration_no }}</li>
-					{% empty %}
-						<p>You currently have no vehicles</p>
-					{% endfor %}
-				</ul>
+				{% if user.is_authenticated %}
+					<h2>{{ cover.cover.type }} breakdown cover</h2>
+					<p>Thank you for choosing us for your breakdown cover</p>
+					<p>{{ cover.cover.description }}</p>
+					<p>Start date: {{ cover.start_date }}</p>
+					<p>End date: {{ cover.start_date }}</p>
+					<ul>
+						{% for vehicle in vehicles %}
+							<li>{{ vehicle.registration_no }}</li>
+						{% empty %}
+							<p>You currently have no vehicles</p>
+						{% endfor %}
+					</ul>
+				{% endif %}
 			</div>
 			{% else %}
 				<p>We see that you have no breakdown cover with us, why not add one today?</p>
