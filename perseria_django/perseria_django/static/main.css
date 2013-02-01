@@ -495,7 +495,19 @@ input[placeholder], [placeholder], *[placeholder]
 {
 	width: 90%;
 	margin: 0 auto;
-	border: 1px solid black;
+}
+
+.breakdown h2
+{
+	font-family: 'OpenSans-Light', sans-serif;
+	font-size: 1.5em;
+	color: #333333;
+	
+	width: 100%;
+	
+	padding-top: 5%;
+	padding-left: 5%;
+	margin-bottom: 1%;
 }
 
 
