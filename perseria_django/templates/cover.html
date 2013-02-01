@@ -4,8 +4,8 @@
 
 {% block content %}
 	<div id = "covercontent">
+		<div class="breakdown">
 			{% if cover %}
-			<div class="breakdown">
 				{% if user.is_authenticated %}
 					<h2>{{ cover.cover.type }} breakdown cover</h2>
 					<p>Thank you for choosing us for your breakdown cover</p>
@@ -20,9 +20,9 @@
 						{% endfor %}
 					</ul>
 				{% endif %}
-			</div>
 			{% else %}
 				<p>We see that you have no breakdown cover with us, why not add one today?</p>
 			{% endif %}	
+		</div>
 	</div>
 {% endblock %}
