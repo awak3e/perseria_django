@@ -4,8 +4,14 @@
 
 {% block content %}
 	<div id = "covercontent">
-		{{ cover.user.username }}
-		{{ cover.start_date }}
-		{{ cover.end_date }}
+		<p>
+			{% if cover %}
+				{{ cover.user.username }}
+				{{ cover.start_date }}
+				{{ cover.end_date }}
+			{% else %}
+				We see that you have no breakdown cover with us, why not add one today?
+			{% endif %}
+		</p>
 	</div>
 {% endblock %}
