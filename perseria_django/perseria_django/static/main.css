@@ -378,7 +378,6 @@ input[placeholder], [placeholder], *[placeholder]
 	width: 100%;
 	height: auto;
 	text-align: center;
-	
 }
 
 .infobox p
@@ -469,8 +468,13 @@ input[placeholder], [placeholder], *[placeholder]
 }
 
 
-
-
+#covercontent
+{
+	margin-top: 25px;
+	width: 100%;
+	height: auto;
+	text-align: center;
+}
 
 
 
