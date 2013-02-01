@@ -13,7 +13,16 @@ class Vehicle(models.Model):
     def __unicode__(self):
         return self.registration_no
     
+class Cover(models.Model):
+    BASIC = 'BR'
+    EXTENDED = 'EX'
+    CHOICES = ((BASIC, 'Basic'), (EXTENDED, 'Extended'))
+    type = models.CharField(max_length = 2, choices=CHOICES, default=BASIC)
+    description = models.TextField()
+    cost = models.CharField(max_length = 10)
+
 class BreakdownCover(models.Model):
+    
     start_date = models.DateField() 
     end_date = models.DateField()
     user = models.ForeignKey(User)
