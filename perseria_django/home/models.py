@@ -4,9 +4,6 @@ from django.contrib.auth.models import User
 class Mechanic(models.Model):
     user = models.ForeignKey(User)
     
-    def __unicode__(self):
-        return self.user
-
 class Vehicle(models.Model):
     user = models.ForeignKey(User)
     model = models.CharField(max_length=30)
