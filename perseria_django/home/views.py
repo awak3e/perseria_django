@@ -21,7 +21,8 @@ def index(request):
     return render(request, 'index.html')
 
 def cover(request):
-    cover_list = Cover.objects.get(user=request.user)
+    #cover_list = Cover.objects.get(user=request.user)
+    cover_list = "hello"
     return render(request, 'cover.html', { 'coverlist' : cover_list, })
 
 def auth(request):

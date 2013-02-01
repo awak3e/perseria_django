@@ -4,12 +4,6 @@
 
 {% block content %}
 	<div id = "covercontent">
-		<ul>
-			{% for cover in coverlist %}
-				<li>{{ cover.start_date }}</li>
-			{% empty %}
-			    <li>Sorry you have no covers currently</li>
-			{% endfor %}
-		</ul>
+		{{ coverlist }}
 	</div>
 {% endblock %}
