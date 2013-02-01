@@ -3,7 +3,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import HttpResponseRedirect
 from django import forms
 from django.contrib.auth.models import User
-from home.models import Cover
+from home.models import BreakdownCover
 
 
 class LoginForm(forms.Form):
@@ -21,7 +21,8 @@ def index(request):
     return render(request, 'index.html')
 
 def cover(request):
-    cover_list = Cover.objects.get(user=request.user)
+    #cover_list = BreakdownCover.objects.get(user=request.user)
+    cover_list = "hll"
     return render(request, 'cover.html', { 'coverlist' : cover_list, })
 
 def auth(request):
