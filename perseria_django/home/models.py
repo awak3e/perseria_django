@@ -14,8 +14,8 @@ class Vehicle(models.Model):
         return self.registration_no
     
 class Cover(models.Model):
-    BASIC = 'basic'
-    EXTENDED = 'extended'
+    BASIC = 'Basic'
+    EXTENDED = 'Extended'
     CHOICES = ((BASIC, 'Basic'), (EXTENDED, 'Extended'))
     type = models.CharField(max_length = 20, choices=CHOICES, default=BASIC)
     description = models.TextField()
