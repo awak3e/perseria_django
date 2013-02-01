@@ -24,7 +24,7 @@ def cover(request):
     try:
         cover = BreakdownCover.objects.get(user=request.user)
     except BreakdownCover.DoesNotExist:
-        cover = ""
+        pass
     return render(request, 'cover.html', { 'cover' : cover, })
 
 def auth(request):
