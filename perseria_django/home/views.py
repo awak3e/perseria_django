@@ -3,7 +3,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import HttpResponseRedirect
 from django import forms
 from django.contrib.auth.models import User
-from home.models import BreakdownCover
+from home.models import BreakdownCover, Vehicle
 
 
 class LoginForm(forms.Form):
@@ -25,7 +25,13 @@ def cover(request):
         cover = BreakdownCover.objects.get(user=request.user)
     except BreakdownCover.DoesNotExist:
         cover = ""
-    return render(request, 'cover.html', { 'cover' : cover, })
+        
+    try:
+        vehicles = Vehicle.objects.filter(user=request.user)
+    except Vehicle.DoesNotExist:
+        vehicles = ""
+        
+    return render(request, 'cover.html', { 'cover' : cover, 'vehicles' : vehicles,})
 
 def auth(request):
     form = LoginForm()

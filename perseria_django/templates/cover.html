@@ -5,22 +5,19 @@
 {% block content %}
 	<div id = "covercontent">
 			{% if cover %}
-			<!--
-			<p>
-				You currently have our {{ cover.cover.type }} breakdown cover.
-				{{ cover.user.username }}
-				{{ cover.start_date }}
-				{{ cover.end_date }}
-			</p>
-			-->
 			<div class="breakdown">
 				<h2>{{ cover.cover.type }} breakdown cover</h2>
-				<p>
-					Thank you for choosing us for your breakdown cover.
-				</p>
-				<p>
-					{{ cover.cover.description }}
-				</p>
+				<p>Thank you for choosing us for your breakdown cover.</p>
+				<p>{{ cover.cover.description }}</p>
+				<p>Start date: {{ cover.start_date }}</p>
+				<p>End date: {{ cover.start_date }}</p>
+				<ul>
+					{% for vehicle in vehicles %}
+						<li>{{ vehicle.registration_no }}</li>
+					{% empty %}
+						<p>You currently have no vehicles</p>
+					{% endfor %}
+				</ul>
 			</div>
 			{% else %}
 				<p>We see that you have no breakdown cover with us, why not add one today?</p>
