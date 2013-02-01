@@ -21,8 +21,8 @@ def index(request):
     return render(request, 'index.html')
 
 def cover(request):
-    cover_list = BreakdownCover.objects.get(user=request.user)
-    return render(request, 'cover.html', { 'coverlist' : cover_list, })
+    cover = BreakdownCover.objects.get(user=request.user)
+    return render(request, 'cover.html', { 'cover' : cover, })
 
 def auth(request):
     form = LoginForm()
