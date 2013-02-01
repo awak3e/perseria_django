@@ -19,5 +19,5 @@ urlpatterns = patterns('',
     url(r'^cover/', 'home.views.cover'),
     url(r'^signout/', 'home.views.signout'),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^api/', include(user_resource.urls))
+    url(r'^api/', include(user_resource.urls)),
 )
