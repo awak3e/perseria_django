@@ -11,6 +11,12 @@
 				{{ cover.start_date }}
 				{{ cover.end_date }}
 			</p>
+			<div class="breakdown">
+				<h2 class="headerstyle1">{{ cover.cover.type }}</h2>
+				<p>
+					{{ cover.cover.description }}
+				</p>
+			</div>
 			{% else %}
 				<p>We see that you have no breakdown cover with us, why not add one today?</p>
 			{% endif %}
