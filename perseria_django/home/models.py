@@ -14,6 +14,7 @@ class BreakdownCover(models.Model):
     #start_date = models.DateField() 
     #end_date = models.DateField()
     user = models.ForeignKey(User)
+    vehicles = models.ForeignKey(Vehicle) 
     
 class Job(models.Model):
     user = models.ForeignKey(User)
