@@ -21,7 +21,10 @@ def index(request):
     return render(request, 'index.html')
 
 def cover(request):
-    cover = BreakdownCover.objects.get(user=request.user)
+    try:
+        cover = BreakdownCover.objects.get(user=request.user)
+    except BreakdownCover.DoesNotExist:
+        cover = ""
     return render(request, 'cover.html', { 'cover' : cover, })
 
 def auth(request):
