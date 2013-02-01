@@ -20,6 +20,9 @@ class Cover(models.Model):
     type = models.CharField(max_length = 2, choices=CHOICES, default=BASIC)
     description = models.TextField()
     cost = models.CharField(max_length = 10)
+    
+    def __unicode__(self):
+        return self.type
 
 class BreakdownCover(models.Model):
     cover = models.ForeignKey(Cover)
