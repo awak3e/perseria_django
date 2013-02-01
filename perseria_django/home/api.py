@@ -28,26 +28,10 @@ class UserResource(ModelResource):
         ]
         
     def login(self, request, **kwargs):
-        self.method_check(request, allowed=['post'])
-
-        data = self.deserialize(request, request.raw_post_data, format=request.META.get('CONTENT_TYPE', 'application/json'))
-
-        username = data.get('username', '')
-        password = data.get('password', '')
-
-        user = authenticate(username=username, password=password)
-        if user:
-            if user.is_active:
-                login(request, user)
-                return self.create_response(request, {
-                    'success': True
-                })
-            else:
-                return self.create_response(request, {
-                    'success': False,
-                    'reason': 'disabled',
-                    }, HttpForbidden )
-        else:
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        
+        if not username or not password:
             return self.create_response(request, {
                 'success': False,
                 'reason': 'incorrect',
