@@ -490,6 +490,7 @@ input[placeholder], [placeholder], *[placeholder]
 	
 	color: #333333;
 	font-family: 'OpenSans', sans-serif;
+	font-size: 0.9em;
 }
 
 .breakdown h2
