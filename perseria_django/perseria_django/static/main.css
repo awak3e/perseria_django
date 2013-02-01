@@ -473,23 +473,22 @@ input[placeholder], [placeholder], *[placeholder]
 
 #covercontent
 {
+	background-color: white;
 	margin-top: 25px;
 	width: 100%;
 	height: auto;
-	text-align: center;
-}
-
-#covercontent p
-{
-	color: #0095dd;
-	background-color: white;
-	padding: 2%;
-	font-family: 'OpenSans', sans-serif;
-	font-size: 1em;
 	margin-bottom: 20px;
 	
 	-webkit-box-shadow:  0px 0px 10px 5px rgba(192, 192, 192, 0.1);
     box-shadow:  0px 0px 10px 5px rgba(192, 192, 192, 0.1);
+}
+
+#covercontent p
+{
+	color: #333333;
+	padding: 2%;
+	font-family: 'OpenSans', sans-serif;
+	font-size: 1em;
 }
 
 
