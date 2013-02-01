@@ -19,7 +19,7 @@ class BreakdownCover(models.Model):
     user = models.ForeignKey(User)
     
     def __unicode__(self):
-        return self.user
+        return self.user.username
     
 class Job(models.Model):
     user = models.ForeignKey(User)
