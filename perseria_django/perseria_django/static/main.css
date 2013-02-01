@@ -467,6 +467,9 @@ input[placeholder], [placeholder], *[placeholder]
 	margin-top: 1%;
 }
 
+/* -------------------------------------------------- */
+/* ----------------- COVER PAGE --------------------- */
+/* -------------------------------------------------- */
 
 #covercontent
 {
@@ -475,9 +478,6 @@ input[placeholder], [placeholder], *[placeholder]
 	height: auto;
 	text-align: center;
 }
-
-
-
 
 
 

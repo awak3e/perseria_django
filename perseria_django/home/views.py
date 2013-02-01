@@ -1,9 +1,10 @@
 from django.shortcuts import render
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import HttpResponseRedirect
-from django.contrib import messages
 from django import forms
 from django.contrib.auth.models import User
+from home.models import Cover
+
 
 class LoginForm(forms.Form):
     lusername = forms.CharField(max_length=20)
@@ -17,8 +18,11 @@ class RegisterForm(forms.Form):
     remail = forms.EmailField()
 
 def index(request):
-    #return render_to_response('index.html', context_instance=RequestContext(request))
     return render(request, 'index.html')
+
+def cover(request):
+    cover_list = Cover.objects.get(user=request.user)
+    return render(request, 'cover.html', { 'coverlist' : cover_list, })
 
 def auth(request):
     form = LoginForm()
@@ -60,7 +64,7 @@ def auth(request):
             
                 
     return render(request, 'auth.html', {'form' : form, 'form2' : form2,})
-
+    
 def signout(request):
     logout(request)
     return HttpResponseRedirect("/")
