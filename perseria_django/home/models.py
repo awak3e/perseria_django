@@ -22,7 +22,7 @@ class Cover(models.Model):
     cost = models.CharField(max_length = 10)
 
 class BreakdownCover(models.Model):
-    
+    cover = models.ForeignKey(Cover)
     start_date = models.DateField() 
     end_date = models.DateField()
     user = models.ForeignKey(User)
